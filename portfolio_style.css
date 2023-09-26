@@ -1,0 +1,1406 @@
+/*
+------- • ❀ • -------
+
+Pink Generalist - Deen Rotaru's portfolio
+
+------- • ❀ • -------
+*/
+
+/*
+
+    Basics
+
+*/
+
+/* Loading fonts */
+@font-face{
+  font-family: 'Gotham Medium';
+  src: url(Assets/Fonts/GothamMedium.oft) format("opentype");
+}
+@font-face{
+  font-family: 'Gotham Light';
+  src: url(Assets/Fonts/GothamLight.oft) format("opentype");
+}
+
+:root{
+/* Color variables */
+  --black: #2C2C2C;
+  --white: #F5F5F5;
+  --pink: #E91E61;
+  --lightpink: #FF79A5;
+  --tagpink: #FFDAE6;
+  --hover: #E99AB4;
+  --translucent-light: rgba(255, 255, 255, 0.300);
+  --translucent-dark: rgba(47, 47, 47, 0.3);
+  --transparent: rgba(0, 0, 0, 0);
+  --backgroundPattern: 250px;
+
+/* Project theme changes */
+  --mondrink: #6A1B45;
+  --mondrink-light: #A8498E;
+
+  --aau: #23488F;
+  --aau-light: #4b6dac;
+
+  --ecobites: #2EB872;
+  --ecobites-light: #75efb2;
+
+  --swaplang: #FF7500;
+  --swaplang-light: #f3a25c;
+
+  --bunnymeadow: #FEBE8C;
+  --bunnymeadow-light: #ffdbc0;
+
+
+/* Text defaults */
+  font-family: "Gotham Light", sans-serif;
+  color: var(--black);
+  font-size: 1.5em;
+}
+
+/* Selection colors */ ::selection {color: var(--white); background: var(--lightpink);}
+
+/* Scrollbar */
+::-webkit-scrollbar {width: 10px; background-color: var(--black);}
+::-webkit-scrollbar-track {border-radius: 0px;}
+::-webkit-scrollbar-thumb {background-color: var(--lightpink); border-radius: 20px;}
+
+/* h1 / Title */ h1{
+  font-size: 1.8em;
+  font-family: 'Gotham Medium';
+  font-weight: bold;
+  letter-spacing: 10px;
+  margin: 15px auto 15px auto;}
+
+/* Centered title */ h1.centered{
+  margin: auto;
+  width: 50%;
+  text-align: center;}
+/* Centered divider */ hr.centered{margin: 20px auto; width: 50%; text-align: center;}
+
+/* h2 / Smaller title */ h2{
+  font-family: 'Gotham Medium';
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 5px;
+  margin: 10px auto;}
+
+/* h3 */ h3{
+  font-family: 'Gotham Medium';
+  font-weight: 300;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  margin: 10px auto;}
+
+/* Paragraph */ p{
+  font-size: 0.6em;
+  font-family: 'Gotham Light';
+  line-height: 20px;
+  text-indent: 1em;}
+
+/* Divider */ hr{
+  border: 1px solid var(--black);
+  margin: 20px 0;}
+
+/* Button */  button{
+  font-size: 0.5em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--lightpink);
+  padding: 10px 25px 10px 25px;
+  margin: 10px auto 10px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  transition-timing-function: ease-in-out;}
+/* Button hover */  button:hover{
+  background-color: var(--pink);
+  transition: background-color 0.2s;
+  transition-timing-function: ease-in-out;}
+
+/*     ------- • ❀ • -------     */
+
+/*
+
+    Body / Animated background
+
+*/
+  * {margin: 0; padding: 0; box-sizing: border-box;}
+
+  html{scroll-behavior: smooth;}
+
+  body{
+    height: 100vh;
+    box-sizing: border-box;
+    display: flexbox;
+    place-items: center;
+    background-image: url(Assets/Background/backround_pattern_default.svg) repeat;
+    background-size: var(--backgroundPattern);
+    animation: movingBackground 10s linear infinite;
+  }
+
+  @keyframes movingBackground{
+    from {background-position: 0 0;}
+    to {background-position: var(--backgroundPattern) var(--backgroundPattern);}
+  }
+
+  section{display: block; margin: 15px auto;}
+
+/*     ------- • ❀ • -------     */
+
+/*
+
+    Navigation bar - Main pages
+
+*/
+  nav{
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .navbar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      justify-content: space-between;
+      padding: 10px;
+      background-color: var(--black);
+      color: var(--white);
+  }
+
+  /* Navigation bar set-up */
+  li {list-style: none;}
+
+  .nav-links a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--white);
+      fill: var(--white);
+      transition: color 0.2s, fill 0.2s;
+      transition-timing-function: ease-in-out;
+  }
+  .nav-links a:hover {
+      color: var(--lightpink);
+      fill: var(--lightpink);
+      transition: color 0.2s, fill 0.2s;
+      transition-timing-function: ease-in-out;
+  }
+
+  .nav-links svg{
+      vertical-align: middle;
+      height: 22px;
+      padding: 3px 3px 5px 3px;
+  }
+
+  /* Logo */
+  .logo {
+      height: 50px;
+      width: auto;
+      margin: 0 20px 0 20px;
+  }
+
+  /* Navigation menu */
+  .menu {
+      display: flex;
+      color: var(--white);
+      gap: 1em;
+      font-size: 0.6em;
+  }
+  .menu li {padding: 5px 15px;}
+
+  /* Navigation bar mobile */
+  /* Checkbox hack */ input[type=checkbox] {display: none;} 
+  /* Hamburger icon */ .hamburger {display: none; font-size: 1.5em; user-select: none; margin: 0 20px 0 20px;}
+
+/*     ------- • ❀ • -------     */
+
+/*
+
+    Project - Subpages
+
+*/
+
+/* Navigation bar */
+  .subpage-project-nav-name{
+    font-family: 'Gotham Medium';
+    font-size: 0.6em;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0 20px;
+  }
+
+  .subpage-project-back svg{
+    height: 50px;
+    width: auto;
+    margin: 0 20px;
+    fill: var(--white);
+    transition: color 0.2s, fill 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .subpage-project-back svg:hover{
+    fill: var(--lightpink);
+    transition: color 0.2s, fill 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .subpage-section{
+    margin: -40px auto;
+  }
+
+  .subpage footer{
+    margin-top: 15%;
+  }
+
+/* Banner */
+  .subpage-project-banner{
+    background: url("Assets/Placeholders/placeholder_project_banner.png") no-repeat center center;
+    width: 100%;
+    height: 150px;
+  }
+
+  .subpage-project-logo-wrap{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+  }
+
+  .subpage-project-logo{
+    height: 100px;
+    width: auto;
+    margin: 20px auto;
+  }
+
+  .project-subpage-section{
+    display: block;
+    margin: 10px auto;
+  }
+
+  .project-subpage-side{
+    display: block;
+    width: 30%;
+    margin: auto;
+  }
+
+  .project-subpage-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    gap: 0.5rem;
+  }
+
+/* Project information */
+  .project-info{
+    display: block;
+    height: 400px;
+    margin: 10px;
+  }
+
+  .project-info li{
+    font-size: 0.6em;
+  }
+
+  .project-info hr{
+    border: 0.5px solid var(--translucent-dark);
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .info-cell-content a{
+    font-family: 'Gotham Medium';
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--pink);
+    text-decoration: none;
+  }
+
+  .project-info-cell{
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .info-cell-label{
+    font-family: 'Gotham Medium';
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .info-cell-content{
+    font-family: 'Gotham Light';
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    float: right;
+  }
+
+/* Tags */
+  .project-subpage-tags-container{
+    display: flexbox;
+    flex-wrap: wrap;
+    height: 90px;
+    width: 100%;
+    margin: 5px auto 0 auto;
+    gap: 5px;
+  }
+
+  .project-subpage-tags-container .project-tag{
+    font-size: 0.7em;
+  }
+
+  .project-info-cell-link{
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  .info-cell-content button{
+    font-size: 1em;
+    padding: 10px 170px;
+    margin: auto;
+  }
+
+/* Project description */
+  .project-subpage-side{
+    display: block;
+    width: 60%;
+    margin: auto;
+  }
+
+  .project-desc{
+    display: block;
+    height: 400px;
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  .project-desc p{
+    font-size: 0.6em;
+    line-height: 25px;
+  }
+
+  .project-desc-img{
+    display: block;
+    height: 250px;
+    width: auto;
+    margin: 10px;
+  }
+
+  .project-items-card{
+    margin: 50px auto;
+  }
+/*     ------- • ❀ • -------     */
+
+/*
+
+    Footer
+
+*/
+
+  footer{
+    height: auto;
+    width: 100%;
+    margin-top: 7%;
+    padding: 20px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+  }
+
+  footer a{text-decoration: none;}
+
+  .footer-icon svg{
+    height: 40px;
+    width: auto;
+    padding: 2px;
+    fill: var(--translucent-light);
+    transition: color 0.2s, fill 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .footer-icon svg:hover{
+    fill: var(--lightpink);
+    transition: color 0.2s, fill 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .footer-copyright{
+    margin-top: 10px;
+    opacity: 50%;
+  }
+
+/*
+
+    Hero section
+
+*/
+
+  .hero-textbox{
+    width: 500px;
+    margin-top: 10%;
+  }
+
+  .hero-title{
+    display: inline-block;
+    line-height: 25px;
+  }
+
+  .hero-pink{
+    display: inline-block;
+    margin-right: 15px;
+    color: var(--pink);
+  }
+
+  .hero-changing-text{
+    display: inline-block;
+  }
+
+  .hero-image{
+    display: block;
+    height: 400px;
+    width: auto;
+    margin: auto;
+  }
+
+  .hero-gif{
+    display: block;
+    position: absolute;
+    height: auto;
+    width: 400px;
+    z-index: 2;
+  }
+
+/*     ------- • ❀ • -------     */
+
+
+/*
+
+    Three columns
+
+*/
+  .three-columns{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: auto;
+  }
+  
+  .three-columns-column{
+    display: block;
+    margin: 50px;
+  }
+
+  .three-columns img{
+    display: block;
+    height: 250px;
+    width: auto;
+    margin: auto;
+  }
+
+  .three-columns p{
+    display: block;
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    text-indent: 0;
+  }
+
+  .three-columns h3{
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+/*     ------- • ❀ • -------     */
+
+
+/*
+
+    Image/Text side-by-side
+
+*/
+  .section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    gap: 0.8rem;
+  }
+  
+  .row {display: flex;}
+  .row:after {content: ""; display: table; clear: both;}
+  
+  .side-image{
+    display: block;
+    height: 400px;
+    width: auto;
+    position: relative;
+    max-width: 600px;
+    margin: 20px;
+  }
+  
+  .side-text{
+    display: block;
+    height: auto;
+    width: 70%;
+    margin: 100px 50px; 
+  }
+
+/*     ------- • ❀ • -------     */
+
+/*
+
+    Project area
+
+*/
+
+  .centered-title-header{
+    display: block;
+    height: auto;
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .area-projects{
+    display: block;
+    margin: auto;
+    align-self: center;
+  }
+
+  .projects-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: content;
+    align-items: flex-start;
+    align-content: space-between;
+    gap: 5px;
+  }
+
+/*
+
+    Project card
+
+*/
+  .project-card-container{
+    display: flexbox;
+    flex-wrap: wrap;
+    position: relative;
+    height: 600px;
+    width: 450px;
+    margin: auto;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .project-card-full-image{
+    display: block;
+    position: relative;
+    width: fit-content;
+  }
+
+  .project-card-screenshot{
+    display: block;
+    height: auto;
+    width: 400px;
+    padding-top: 75px;
+    padding-left: 60px;
+    margin: auto;
+    z-index: 1;
+    transition: filter 0.5s;
+  }
+  
+  .project-card-illustration{
+    display: block;
+    height: auto;
+    width: 400px;
+    margin-right: 50px;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .project-card-full-image:hover .project-card-screenshot{
+    filter: brightness(120%) grayscale(8%);
+    transition: filter 0.5s;
+  }
+
+  .project-text-container{
+    display: block;
+    position: relative;
+    margin-left: 10%;
+    height: 350px;
+    width: fit-content;
+  }
+  .project-card-title{position: relative; margin: 30px auto auto auto; text-align: center;}
+
+/* Formatting modifier*/
+  .project-card-container p{display: block; height: 80px; width: 90%; margin: 10px auto; text-align: left;}
+  .project-card-container h3{height: 25%; font-size: 0.8em;}
+  .project-card-container hr{width: 400px; text-align: center; margin: 10px auto;}
+  .project-card-container button{display: block; font-size: 0.5em; letter-spacing: 3px; margin: 20px auto;}
+  .project-card-container a{text-decoration: none;}
+
+/* Project tag system */
+
+  .project-filter{
+    text-align: center;
+    width: 50%;
+    margin: -15px auto 2% auto;
+  }
+
+  .project-tags-container{
+    display: flexbox;
+    flex-wrap: wrap;
+    height: 80px;
+    width: 90%;
+    margin: auto;
+    gap: 2px;
+  }
+
+  .project-tags-container .project-text{
+    font-weight: 600;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    width: 100%;
+  }
+
+  .project-tag{
+    display: inline-block;
+    height: 20px;
+    width: auto;
+    padding: 5px 10px;
+    margin: 5px auto;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--black);
+    font-size: 0.4em;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .filter-tags{transition: background-color 0.2s, color 0.2s; transition-timing-function: ease-in-out;}
+  .filter-tags:hover{color: var(--white); background-color: var(--lightpink); transition: background-color 0.2s, color 0.2s; transition-timing-function: ease-in-out;}
+
+/* Javascript tags */
+  .filterTags{display: none;}
+  .show {display: block;}
+  .filter-tags.active {color: var(--white); background-color: var(--pink);}
+  
+/*     ------- • ❀ • -------     */
+
+/* MonDrink banner */ .sub-mondrink .subpage-project-banner{background: url("Assets/Projects/MonDrink/Project_cover_banner_MonDrink.png") no-repeat top left;}
+/* MonDrink link */.sub-mondrink a{color: var(--mondrink); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* MonDrink link hover */.sub-mondrink a:hover{color: var(--mondrink-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* MonDrink Button */.sub-mondrink button{background-color: var(--mondrink); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* MonDrink Button hover */.mondrink button:hover{background-color: var(--mondrink-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* MonDrink SVG hover */.sub-mondrink svg:hover{fill: var(--mondrink-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
+
+/* AAU banner */ .sub-aau .subpage-project-banner{background: url("Assets/Projects/AarhusArtisticUnderground/Project_cover_banner_AAU.png") no-repeat top left;}
+/* AAU link */.sub-aau a{color: var(--aau); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* AAU link hover */.sub-aau a:hover{color: var(--aau-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* AAU Button */.sub-aau button{background-color: var(--aau); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* AAU Button hover */.aau button:hover{background-color: var(--aau-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* AAU SVG hover */.sub-aau svg:hover{fill: var(--aau-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
+
+/* EcoBites link */.sub-ecobites a{color: var(--ecobites); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* EcoBites link hover */.sub-ecobites a:hover{color: var(--ecobites-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* EcoBites Button */.sub-ecobites button{background-color: var(--ecobites); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* EcoBites Button hover */.ecobites button:hover{background-color: var(--ecobites-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* EcoBites SVG hover */.sub-ecobites svg:hover{fill: var(--ecobites-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
+
+/* SwapLang hover */.swaplang button:hover{background-color: var(--swaplang); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* SwapLang SVG hover */.sub-swaplang svg:hover{fill: var(--swaplang-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
+
+/* Bunny Meadow hover */.bunnymeadow button:hover{background-color: var(--bunnymeadow); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* Bunny Meadow SVG hover */.sub-bunnymeadow svg:hover{fill: var(--bunnymeadow-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
+
+/*     ------- • ❀ • -------     */
+
+
+/*
+
+    Responsiveness / Media queries
+
+*/
+
+/*
+  Navigation bar responsiveness
+*/
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: var(--black);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+      }
+
+      .menu li + li {margin-top: 12px;}
+      input[type=checkbox]:checked ~ .menu {display: block;}
+      .hamburger {display: block;}
+  }
+
+  
+/*     ------- • ❀ • -------     */
+
+
+/*
+  Responsiveness - Narrower desktop modifiers
+*/
+    @media screen and (max-width: 1050px) and (min-width: 905px){
+      section{display: block; margin: 10px auto;}
+      .section-container{width: 70%; margin: auto;}
+
+      .side-image{
+        display: block;
+        height: 300px;
+        width: auto;
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+      }
+      
+      .side-text{
+        display: block;
+        height: auto;
+        margin: 100px 50px; 
+      }
+      .side-text p{display: block; width: 400px;}
+      .side-text a{display: block; margin-top: 15px;}
+
+/*     ------- • ❀ • -------     */
+
+      .area-projects{
+        display: block;
+        margin: auto;
+        width: 100%;
+      }
+
+      .project-card-container{
+        width: 370px;
+        margin: 20px 50px;
+        text-align: center;
+        margin: auto;
+      }
+
+      .project-card-screenshot{
+        height: auto;
+        width: 390px;
+        padding-top: 73px;
+        padding-left: 60px;
+        margin: 50px 0;
+        z-index: 1;
+        transition: filter 0.5s;
+      }
+      
+      .project-card-illustration{
+        display: block;
+        height: auto;
+        width: 390px;
+        margin: auto;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .project-text-container{
+        display: block;
+        margin-left: 10%;
+        height: 350px;
+        width: 350px;
+      }
+
+      .project-tags-container{
+        display: flexbox;
+        flex-wrap: wrap;
+        height: 80px;
+        width: 90%;
+        margin: auto;
+        gap: 5px;
+      }
+
+      .project-filter{
+        text-align: center;
+        width: 70%;
+        margin: -15px auto 5px auto;
+      }
+
+      /* Formatting modifier*/
+      .project-card-container p{display: block; height: 100px; width: 95%; margin: 0px auto 10px auto;}
+      .project-card-container h3{font-size: 0.7em; letter-spacing: 3px;}
+      .project-card-container hr{width: 300px; text-align: center; margin: 10px auto;}
+      .project-card-container button{display: block; font-size: 0.4em; letter-spacing: 3px; margin: 15px auto;}
+
+    /*     ------- • ❀ • -------     */
+
+      .three-columns{width: 75%; align-items: center; justify-content: center; margin: auto;}
+      .three-columns p{width: 400px;}
+      .three-columns h3{font-size: 1.2em;}
+
+    /*     ------- • ❀ • -------     */
+
+      /* Banner */
+      .subpage-project-banner{
+        width: 100%;
+        height: 120px;
+      }
+
+      .subpage-project-logo{
+        height: 90px;
+        width: auto;
+        margin: 15px auto;
+      }
+
+      .project-subpage-section{
+        display: block;
+        margin: 10px auto;
+      }
+
+      .project-subpage-side{
+        display: block;
+        width: 30%;
+        margin: auto;
+      }
+
+      .project-subpage-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        gap: 0.5rem;
+      }
+
+    /* Project information */
+      .project-info{
+        display: block;
+        height: 400px;
+        margin: 10px;
+      }
+
+      .project-info-cell{
+        display: flexbox;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+    /* Tags */
+      .project-subpage-tags-container{
+        display: flexbox;
+        flex-wrap: wrap;
+        height: 100px;
+        width: 100%;
+        margin: 5px auto 0 auto;
+        gap: 5px;
+      }
+
+      .project-subpage-tags-container .project-tag{
+        font-size: 0.7em;
+      }
+
+      .project-info-cell-link{
+        display: block;
+        width: 100%;
+        margin: auto;
+      }
+
+      .info-cell-content button{
+        font-size: 1em;
+        padding: 15px 120px;
+        margin: auto;
+      }
+
+    /* Project description */
+      .project-subpage-side{
+        display: block;
+        width: 60%;
+        margin: auto;
+      }
+
+      .project-desc{
+        display: block;
+        height: 500px;
+        width: 100%;
+        margin: 40px auto;
+      }
+
+      .project-desc-img{
+        display: block;
+        height: 200px;
+        width: auto;
+        margin: 10px;
+      }
+  
+}
+
+/*     ------- • ❀ • -------     */
+
+
+/*
+  Responsiveness - Tablet modifiers
+*/
+
+    @media screen and (max-width: 904px) and (min-width: 700px){
+      nav{display: block; width: 100%; margin-bottom: 50px;}
+      section{display: block; margin: 20px auto;}
+
+      /* Navigation bar */
+      .nav-links svg{display:none}
+
+      /* Hero section */
+      header{display: block; margin: 15px auto;}
+      .hero-image{display: none;}
+      .hero-pink{display: block;}
+      .hero-changing-text{display: block;}
+
+      /* Formatting modifier*/
+      .project-card-container p{display: block; height: 100px; width: 400px; margin: 0px auto 10px auto;}
+      .project-card-container h3{font-size: 0.7em; letter-spacing: 3px;}
+      .project-card-container hr{width: 300px; text-align: center; margin: 10px auto;}
+      .project-card-container button{display: block; font-size: 0.4em; letter-spacing: 3px; margin: 10px auto;}
+
+      /* Image/Text side by side */
+      .row {display: flex;}
+      .row:after {content: ""; display: table; clear: both;}
+
+      /* Divider */ hr{width: 100%; margin: 25px auto;}
+
+      .section-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: side-column;
+        justify-content: center;
+        align-items:center;
+        width: 85%;
+        margin: auto;
+        gap: 1rem;
+      }
+
+      .side-image{
+        height: auto;
+        width: 250px;
+        margin: auto;
+        display: block;
+      }
+
+      .side-text{
+        display: block;
+        height: auto;
+        width: 65%;
+        margin-top: 2%;
+        justify-content: center;
+        flex-direction: side-row;
+        text-align: center;
+      }
+      .side-text p{width: 500px; text-align: left;}
+      .side-text h2{width: 500px; text-align: center;}
+      .side-text hr{width: 500px;}
+      .side-text button{margin: 20px auto;}
+
+      /* Projects area */
+      .projects-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: auto;
+        gap: 5px;
+      }
+
+      .area-projects{
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
+
+      .project-card-full-image{
+        display: block;
+        margin: auto -5%;
+        width: fit-content;
+      }
+
+      .project-text-container{
+        display: block;
+        margin: auto;
+      }
+
+      .project-filter{
+        text-align: center;
+        width: 85%;
+        margin: -15px auto 20px auto;
+      }
+
+    /*     ------- • ❀ • -------     */
+
+      /* 3 columns */
+      .three-columns-column{height: 350px; margin: 20px auto;}
+      .three-columns{display: flex; flex-wrap: wrap; flex-direction: row; width: 75%; margin: auto;}
+      .three-columns img{height: 200px;}
+      .three-columns p{width: 500px;}
+      .three-columns h3{font-size: 1.5em;}
+
+
+    /*     ------- • ❀ • -------     */
+
+      /* Banner */
+      .subpage-project-banner{
+        width: 100%;
+        height: 120px;
+        margin: auto;
+        margin-top: -50px;
+      }
+
+      .subpage-project-logo{
+        height: 90px;
+        width: auto;
+        margin: 15px auto;
+      }
+
+      .project-subpage-section{
+        margin: 5px auto;
+      }
+
+      .project-subpage-side{
+        display: block;
+        width: 100%;
+        margin: auto;
+      }
+
+      .project-subpage-section{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items:center;
+        width: 85%;
+        margin: auto;
+        gap: -200px;
+      }
+      .project-subpage-section .project-items{
+        flex-direction: column;
+      }
+
+      .project-subpage-section .project-side-image{
+        order: 2;
+        margin-top: 50px;
+      }
+
+      /* Project information */
+      .project-info{
+        display: block;
+        height: 400px;
+        width: 100%;
+      }
+      
+      .project-cell-button{
+        display: block;
+        width: 100%;
+        margin: auto;
+        align-self: center;
+      }
+
+      .project-info-cell-link{
+        display: block;
+        width: 50%;
+        margin: auto;
+      }
+    
+      .info-cell-content button{
+        font-size: 1em;
+        width: 100%;
+        padding: 15px 150px;
+        margin: auto;
+      }
+
+      /* Project description */
+      .project-desc{
+        display: flexbox;
+        flex-direction: row;
+        height: 300px;
+        width: 600px;
+        margin: 50px auto;
+      }
+
+      .project-desc-img{
+        display: block;
+        height: 200px;
+        width: auto;
+        margin: 10px;
+      }
+
+      .projects-side-text{
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        flex-direction: side-row;
+        text-align: center;
+      }
+      .projects-side-text p{width: 85%; text-align: left; margin: auto;}
+      .projects-side-text hr{width: 85%; margin: 25px auto;}
+      .projects-side-text h2{width: 85%; text-align: center;}
+  
+}
+
+/*     ------- • ❀ • -------     */
+
+
+/*
+  Responsiveness - Mobile & Content modifiers
+*/
+    @media screen and (max-width: 700px) {
+      nav{display: block; width: 100%; margin-bottom: 50px;}
+      section{display: block; margin: 5px auto;}
+
+    /* Divider */ hr{width: 100%; margin: 25px auto;}
+
+    /* Hero section */
+      header{display: block; margin: 15px auto;}
+      .hero-image{display: none;}
+      .hero-pink{display: block;}
+      .hero-changing-text{display: block;}
+      
+    /* Image/Text side by side */
+      .side-column {width: 100%;}
+      .row {display: flex;}
+      .row:after {content: ""; display: table; clear: both;}
+
+      .section-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: side-column;
+        justify-content: center;
+        align-items:center;
+        width: 85%;
+        margin: auto;
+        gap: 1rem;
+      }
+
+      .side-image{
+        display: block;
+        height: auto;
+        width: 250px;
+        margin: auto;
+      }
+
+      .side-text{
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        flex-direction: side-row;
+        text-align: center;
+      }
+      .side-text p{width: 100%; text-align: left; margin: auto;}
+      .side-text h2{width: 85%; text-align: center;}
+      .side-text button{margin: 20px auto;}
+      
+
+    /*     ------- • ❀ • -------     */
+
+    /* Project card */
+      .projects-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: auto;
+        gap: 5px;
+      }
+
+      .area-projects{
+        display: block;
+        width: 80%;
+        margin: auto;
+      }
+
+      .project-card-container{
+        display: flex;
+        flex-wrap: wrap;
+        height: 650px;
+        width: 450px;
+        margin: 20px auto;
+        gap: 5px;
+        text-align: center;
+      }
+
+      .project-card-full-image{
+        display: block;
+        margin: auto;
+      }
+
+      .project-card-screenshot{
+        display: block;
+        height: auto;
+        width: 440px;
+        padding-top: 95px;
+        padding-left: 20px;
+        margin: auto;
+        z-index: 1;
+        transition: filter 0.5s;
+      }
+
+      .project-card-illustration{
+        display: block;
+        height: auto;
+        width: 500px;
+        margin-right: 40px;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .project-tags-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 5px auto;
+        gap: 1px;
+        align-self: center;
+      }
+
+      .project-filter{
+        text-align: center;
+        width: 85%;
+        margin: -15px auto 50px auto;
+      }
+
+      .project-card-title{margin-top: -10px; margin: auto;}
+      
+      .project-card-container p{display: block; height: 100px; width: 75%; margin: 10px auto;}
+      .project-card-container h3{font-size: 0.7em; letter-spacing: 3px;}
+      .project-card-container hr{width: 350px; text-align: center; margin: 10px auto;}
+      .project-card-container button{display: block; font-size: 0.6em; letter-spacing: 3px;}
+
+    /*     ------- • ❀ • -------     */
+
+      /* 3 columns */
+      .three-columns{display: flex; flex-wrap: wrap; flex-direction: row; width: 75%; margin: auto;}
+      .three-columns img{height: 200px;}
+      .three-columns p{width: 500px;}
+      .three-columns h3{font-size: 1.5em;}
+
+    /*     ------- • ❀ • -------     */
+
+      /* Banner */
+      .subpage-project-banner{
+        width: 100%;
+        height: 120px;
+        margin: auto;
+        margin-top: -50px;
+      }
+
+      .subpage-project-logo{
+        height: 90px;
+        width: auto;
+        margin: 15px auto;
+      }
+
+      .project-subpage-section{
+        margin: 5px auto;
+      }
+
+      .project-subpage-section{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items:center;
+        width: 100%;
+        margin: auto;
+        gap: -200px;
+      }
+      .project-subpage-section .project-items{
+        flex-direction: column;
+      }
+
+      .project-subpage-section .project-side-image{
+        order: 2;
+        margin-top: 50px;
+      }
+
+      .project-subpage-side{
+        display: block;
+        width: 100%;
+        margin: auto;
+      }
+
+      /* Project information */
+      .project-info{
+        display: block;
+        height: 500px;
+        width: 80%;
+        margin: 50px;
+        margin-bottom: -50px;
+      }
+    
+      .project-cell-button{
+        display: block;
+        width: 100%;
+        margin: auto;
+      }
+
+      .project-info-cell-link{
+        display: block;
+        width: 50%;
+        margin: auto;
+      }
+    
+      .info-cell-content button{
+        font-size: 0.9em;
+        width: 100%;
+        padding: 15px 80px;
+        margin: auto;
+      }
+
+      /* Project description */
+      .project-desc{
+        display: flexbox;
+        flex-direction: row;
+        height: 350px;
+        width: 100%;
+        margin: 20px auto 50px auto;
+      }
+
+      .project-desc{width: 80%;}
+
+      .project-desc-img{
+        display: block;
+        height: 200px;
+        width: auto;
+        margin: 10px;
+      }
+
+      .projects-side-text{
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        flex-direction: side-row;
+        text-align: center;
+      }
+      .projects-side-text p{width: 85%; text-align: left; margin: auto;}
+      .projects-side-text hr{width: 85%; margin: 25px auto;}
+      .projects-side-text h2{width: 85%; text-align: center;}
+    }

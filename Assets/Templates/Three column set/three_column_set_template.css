@@ -1,0 +1,75 @@
+/*
+
+    Three columns
+
+*/
+.three-columns{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: auto;
+  }
+  
+  .three-columns-column{
+    display: block;
+    margin: 50px;
+  }
+
+  .three-columns img{
+    display: block;
+    height: 250px;
+    width: auto;
+    margin: auto;
+  }
+
+  .three-columns p{
+    display: block;
+    width: 250px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .three-columns h3{
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+/*     ------- • ❀ • -------     */
+
+/*
+  Responsiveness - Narrower desktop modifiers
+*/
+@media screen and (max-width: 1050px) and (min-width: 905px){
+  .three-columns{width: 75%; align-items: center; justify-content: center; margin: auto;}
+  .three-columns p{width: 400px;}
+  .three-columns h3{font-size: 1.2em;}
+}
+
+/*     ------- • ❀ • -------     */
+
+/*
+  Responsiveness - Tablet modifiers
+*/
+@media screen and (max-width: 904px) and (min-width: 700px){
+  .three-columns{display: flex; flex-wrap: wrap; flex-direction: row; width: 75%; margin: auto;}
+  .three-columns img{height: 200px;}
+  .three-columns p{width: 500px;}
+  .three-columns h3{font-size: 1.5em;}
+}
+
+/*     ------- • ❀ • -------     */
+
+/*
+  Responsiveness - Mobile & Content modifiers
+*/
+@media screen and (max-width: 700px) {
+  .three-columns{display: flex; flex-wrap: wrap; flex-direction: row; width: 75%; margin: auto;}
+  .three-columns img{height: 200px;}
+  .three-columns p{width: 500px;}
+  .three-columns h3{font-size: 1.5em;}
+}
