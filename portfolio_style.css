@@ -456,6 +456,14 @@ Pink Generalist - Deen Rotaru's portfolio
     line-height: 25px;
   }
 
+  .about h1{
+    display: inline;
+    font-size: 1.5em;
+  }
+  .about .hero-pink{
+    margin-left: 10px;
+  }
+
   .hero-pink{
     display: inline-block;
     margin-right: 15px;
@@ -471,6 +479,15 @@ Pink Generalist - Deen Rotaru's portfolio
     height: 400px;
     width: auto;
     margin: auto;
+  }
+
+  .hero-about{
+    display: block;
+    height: 400px;
+    width: auto;
+    margin: auto;
+    margin-left: -50px;
+    border-radius: 500px;
   }
 
   .hero-gif{
