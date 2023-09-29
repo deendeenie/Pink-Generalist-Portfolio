@@ -20,6 +20,10 @@
 
     <!-- J Query -->
     <script src="jquery.js"></script>
+
+    <!-- Animate on scroll library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <!-- Head END -->
 
@@ -71,7 +75,7 @@
       <div class="column side-text">
       <div class="hero-textbox">
           <div class="hero-title">
-            <h1 class="hero-pink">Pink</h1> <h1 id="jobTitle" class="hero-changing-text"></h1>
+            <h1>More about</h1> <h1 class="hero-pink">Deen</h1>
           </div>
 
           <hr>
@@ -83,70 +87,81 @@
       <!-- Image -->
       <div class="column">
           <img src="" class="hero-gif" alt="">
-          <img src="Assets/Landing_Hero_illustration.png" class="hero-image" alt="">
+          <img src="Assets/" class="hero-image" alt="">
       </div>
 
     </header>
 
 <!--
 
-      3 columns
+      Timeline
 
 -->
-    <section id="landingSkills" class="row">
-      <div class="three-columns">
-
-        <!-- Column 1 -->
-        <div class="three-columns-column">
+<section id="aboutTimeline" class="subpage-section">    
+  <!-- Beginnings -->
+      <section class="project-subpage-section project-items row project-items-card" data-aos="fade-left">
+          <!-- Text content -->
+          <div class="column projects-side-text">
+            <h3>Beginnings</h3><hr>
+            <p>As far as I can remember, I loved learning and making things, I would go through a lot of intense phases of interest in different topics. I have always been a very creative kid, but when I was 12 years old I was exposed to the world of digital art and animation as a skill you realistically can learn, at the same time in 6th-grade computer class I started learning basic C++ and most importantly HTML, after that I began being very invested in online content creation: graphic, video, written, coded, I wanted to do it all.</p>
+          </div>
+  
           <!-- Image -->
-          <div class="">
-              <img src="Assets/Placeholders/placeholder_square.png" alt="">
+          <div class="column project-side-image">
+            <img src="Assets/Placeholders/placeholder_square.png" class="project-desc-img" alt="">
+          </div>
+      </section>
+  
+   <!-- Going steady -->
+      <section class="project-subpage-section project-items row project-items-card" data-aos="fade-right">
+          <!-- Image -->
+          <div class="column project-side-image">
+            <img src="Assets/Placeholders/placeholder_square.png" class="project-desc-img" alt="">
           </div>
 
           <!-- Text content -->
-          <div class="">
-            <h3>&#8212 Beginnings &#8212</h3>
-            <p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu sapien, dapibus vehicula mi quis, venenatis viverra nulla. Suspendisse molestie eros ac efficitur lacinia. Fusce vel libero sodales, ullamcorper sem aliquet, scelerisque nulla.</p>
+          <div class="column projects-side-text">
+            <h3>Going steady</h3><hr>
+            <p>
+              My interests and skills related to art and tech grew as time went on. Even though I had a social sciences specialization in high school, not something prioritizing technical subjects, my ICT teacher encouraged me to participate in the ICT Olympiad: in 2019 I came first place in my county and won a silver medal at the National Olympiad.
+            </p>
+            <p>
+              While my dreams of going to the Olympiad in the next few years were shattered by its cancellation due to the pandemic, I focused more on my artistic skills. I began doing freelance art commission work for whoever showed interest. My small side hustle proved itself quite successful after a while, which in 2021 led me to work for Quartz Apps, a small game studio making Discord bot games, I worked as a game asset artist and occasional marketing material artist for Bake.gg and Isles.gg.
+            </p>
           </div>
+      </section>
+
+   <!-- Going steady -->
+      <section class="project-subpage-section project-items row project-items-card" data-aos="fade-left">
+        <!-- Text content -->
+        <div class="column projects-side-text">
+          <h3>Moving forward</h3><hr>
+          <p>
+            I moved to Denmark in 2022 to study multimedia design at Business Academy Aarhus. Being a student at BAAA has been a great experience in many ways, it helped me solidify my skills and allowed me to see the good, the bad, and the surprises that come with teamwork. Working as a student assistant at BAAA’s library has also given me a real taste of seeing something you made making a difference, no matter how small, even if it’s bookmarks and posters.
+          </p>
+          <p>
+            Outside of my education and my job, I’m working on keeping up my online artists brand, Pink Sinsila, and developing the 2 animated web series I’ve wanted to make for years.
+          </p>
+          <p>
+            As my time at BAAA is coming to a close, I am looking for a place that needs and appreciates my generalism, for just 10 weeks or even more.
+          </p>
+
         </div>
 
-        <!-- Column 2 -->
-        <div class="three-columns-column">
-          <!-- Image -->
-          <div>
-              <img src="Assets/Placeholders/placeholder_square.png" alt="">
-          </div>
-
-          <!-- Text content -->
-          <div class="">
-            <h3>&#8212 Going steady &#8212</h3>
-            <p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu sapien, dapibus vehicula mi quis, venenatis viverra nulla. Suspendisse molestie eros ac efficitur lacinia. Fusce vel libero sodales, ullamcorper sem aliquet, scelerisque nulla.</p>
-          </div>
-        </div>
-        
-        <!-- Column 3 -->
-        <div class="three-columns-column">
-          <!-- Image -->
-          <div>
-              <img src="Assets/Placeholders/placeholder_square.png" alt="">
-          </div>
-
-          <!-- Text content -->
-          <div>
-            <h3>&#8212 Moving forward &#8212</h3>
-            <p>Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu sapien, dapibus vehicula mi quis, venenatis viverra nulla. Suspendisse molestie eros ac efficitur lacinia. Fusce vel libero sodales, ullamcorper sem aliquet, scelerisque nulla.</p>
-          </div>
+        <!-- Image -->
+        <div class="column project-side-image">
+          <img src="Assets/Placeholders/placeholder_square.png" class="project-desc-img" alt="">
         </div>
 
-    </div>
-    </section>
+      </section>
 
+  </section>
 <!--
 
-      Landing to about
+      More
 
 -->
-    <section id="toAboutfromLanding" class="row section-container">
+    <section id="toAboutfromLanding" class="row section-container" data-aos="fade-right">
       <!-- Image -->
       <div class="column">
           <img src="Assets/Placeholders/placeholder_square.png" class="side-image">
@@ -178,4 +193,6 @@
     </footer>
     
 <!-- JavaScript --><script src="portfolio_javascript.js"></script>
+<!-- Animate on scroll library --><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Initiate library --><script>AOS.init();</script>
 </body>
