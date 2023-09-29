@@ -571,6 +571,49 @@ Pink Generalist - Deen Rotaru's portfolio
 
 /*
 
+    Contact page
+
+*/
+  .contact-links{
+    display: block;
+    height: 80px;
+    margin: 20px auto;
+  }
+
+  .contact-info{
+    display: block;
+    height: 50px;
+    margin: auto;
+    align-content: center;
+  }
+
+  .contact-info-icon{
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .contact-info-icon svg{
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .contact-info-text{
+    display: inline-block;
+    margin: 20px auto;
+  }
+
+  .contact-info p{
+    text-indent: 0;
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+
+/*     ------- • ❀ • -------     */
+
+/*
+
     Project area
 
 */
