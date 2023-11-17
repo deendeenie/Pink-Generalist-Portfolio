@@ -15,11 +15,15 @@ Pink Generalist - Deen Rotaru's portfolio
 /* Loading fonts */
 @font-face{
   font-family: 'Gotham Medium';
-  src: url(Assets/Fonts/GothamMedium.oft) format("opentype");
+  src: url(Assets/Fonts/font_GothamMedium.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face{
   font-family: 'Gotham Light';
-  src: url(Assets/Fonts/GothamLight.oft) format("opentype");
+  src: url(Assets/Fonts/font_GothamLight.otf) format('opentype');
+  font-weight: lighter;
+  font-style: normal;
 }
 
 :root{
@@ -40,20 +44,22 @@ Pink Generalist - Deen Rotaru's portfolio
   --mondrink-light: #A8498E;
 
   --aau: #23488F;
-  --aau-light: #4b6dac;
+  --aau-light: #F5DD62;
 
-  --ecobites: #2EB872;
-  --ecobites-light: #75efb2;
+  --ecobites: #FF5D6E;
+  --ecobites-light: #2EB872;
+  --ecobites-banner: #A3DE83;
 
   --swaplang: #FF7500;
-  --swaplang-light: #f3a25c;
+  --swaplang-light: #FFB270;
+  --swaplang-banner: #EFF0F3; 
 
   --bunnymeadow: #FEBE8C;
-  --bunnymeadow-light: #ffdbc0;
+  --bunnymeadow-light: #B6E2A1;
 
 
 /* Text defaults */
-  font-family: "Gotham Light", sans-serif;
+  font-family: "Gotham Light", Roboto, sans-serif;
   color: var(--black);
   font-size: 1.5em;
 }
@@ -67,7 +73,7 @@ Pink Generalist - Deen Rotaru's portfolio
 
 /* h1 / Title */ h1{
   font-size: 1.8em;
-  font-family: 'Gotham Medium';
+  font-family: 'Gotham Medium', Roboto, sans-serif;
   font-weight: bold;
   letter-spacing: 10px;
   margin: 15px auto 15px auto;}
@@ -79,14 +85,14 @@ Pink Generalist - Deen Rotaru's portfolio
 /* Centered divider */ hr.centered{margin: 20px auto; width: 50%; text-align: center;}
 
 /* h2 / Smaller title */ h2{
-  font-family: 'Gotham Medium';
+  font-family: 'Gotham Medium', Roboto, sans-serif;
   font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 5px;
   margin: 10px auto;}
 
 /* h3 */ h3{
-  font-family: 'Gotham Medium';
+  font-family: 'Gotham Medium', Roboto, sans-serif;
   font-weight: 300;
   font-size: 0.8em;
   letter-spacing: 2px;
@@ -94,9 +100,13 @@ Pink Generalist - Deen Rotaru's portfolio
 
 /* Paragraph */ p{
   font-size: 0.6em;
-  font-family: 'Gotham Light';
+  font-family: 'Gotham Light', Roboto, sans-serif;
   line-height: 20px;
   text-indent: 1em;}
+
+/* Bold */ b{
+  font-weight: 1500;
+}
 
 /* Divider */ hr{
   border: 1px solid var(--black);
@@ -119,6 +129,9 @@ Pink Generalist - Deen Rotaru's portfolio
   background-color: var(--pink);
   transition: background-color 0.2s;
   transition-timing-function: ease-in-out;}
+
+/* Link */ p a{font-family: 'Gotham Medium', Roboto, sans-serif; font-size: 1em; font-weight: 700; color: var(--lightpink); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* Link hover */ p a:hover{color: var(--pink); transition: color 0.2s; transition-timing-function: ease-in-out;}  
 
 /*     ------- • ❀ • -------     */
 
@@ -146,7 +159,7 @@ Pink Generalist - Deen Rotaru's portfolio
     to {background-position: var(--backgroundPattern) var(--backgroundPattern);}
   }
 
-  section{display: block; margin: 15px auto;}
+  section{display: block; margin: 10px auto;}
 
 /*     ------- • ❀ • -------     */
 
@@ -159,6 +172,7 @@ Pink Generalist - Deen Rotaru's portfolio
     display: block;
     width: 100%;
     margin-bottom: 0;
+    z-index: 10;
   }
 
   .navbar {
@@ -226,7 +240,7 @@ Pink Generalist - Deen Rotaru's portfolio
 
 /* Navigation bar */
   .subpage-project-nav-name{
-    font-family: 'Gotham Medium';
+    font-family: 'Gotham Medium', Roboto, sans-serif;
     font-size: 0.6em;
     font-weight: 300;
     letter-spacing: 5px;
@@ -259,9 +273,9 @@ Pink Generalist - Deen Rotaru's portfolio
 
 /* Banner */
   .subpage-project-banner{
-    background: url("Assets/Placeholders/placeholder_project_banner.png") no-repeat center center;
+    background-color: var(--lightpink);
     width: 100%;
-    height: 150px;
+    height: 100px;
   }
 
   .subpage-project-logo-wrap{
@@ -272,9 +286,9 @@ Pink Generalist - Deen Rotaru's portfolio
   }
 
   .subpage-project-logo{
-    height: 100px;
+    height: 70px;
     width: auto;
-    margin: 20px auto;
+    margin: 10px auto;
   }
 
   .project-subpage-section{
@@ -315,7 +329,7 @@ Pink Generalist - Deen Rotaru's portfolio
   }
 
   .info-cell-content a{
-    font-family: 'Gotham Medium';
+    font-family: 'Gotham Medium', Roboto, sans-serif;
     font-size: 1em;
     font-weight: 700;
     letter-spacing: 3px;
@@ -330,7 +344,7 @@ Pink Generalist - Deen Rotaru's portfolio
   }
 
   .info-cell-label{
-    font-family: 'Gotham Medium';
+    font-family: 'Gotham Medium', Roboto, sans-serif;
     font-size: 0.8em;
     font-weight: 300;
     letter-spacing: 2px;
@@ -339,7 +353,7 @@ Pink Generalist - Deen Rotaru's portfolio
   }
 
   .info-cell-content{
-    font-family: 'Gotham Light';
+    font-family: 'Gotham Light', Roboto, sans-serif;
     font-size: 0.8em;
     letter-spacing: 2px;
     float: right;
@@ -390,11 +404,24 @@ Pink Generalist - Deen Rotaru's portfolio
     line-height: 25px;
   }
 
+  .project-desc a{
+    font-family: 'Gotham Medium', Roboto, sans-serif;
+    font-weight: 700;
+  }
+
   .project-desc-img{
     display: block;
     height: 250px;
     width: auto;
     margin: 10px;
+    border-radius: 30px;
+    border: 1.5px solid var(--black);
+  }
+
+  #aboutPage .project-desc-img{
+    border-radius: 0;
+    border: 0;
+
   }
 
   .project-items-card{
@@ -474,11 +501,36 @@ Pink Generalist - Deen Rotaru's portfolio
     display: inline-block;
   }
 
+  .hero-image-wrap{
+    position: relative;
+    display: block;
+    height: 400px;
+    width: auto;
+    margin: auto;
+    margin-left: -220px;
+  }
+  
   .hero-image{
     display: block;
     height: 400px;
     width: auto;
     margin: auto;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .hero-gif-overlay{
+    display: block;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .hero-about-overlay{
+    margin-left: -40px;
+    z-index: -1;
   }
 
   .hero-about{
@@ -490,13 +542,6 @@ Pink Generalist - Deen Rotaru's portfolio
     border-radius: 500px;
   }
 
-  .hero-gif{
-    display: block;
-    position: absolute;
-    height: auto;
-    width: 400px;
-    z-index: 2;
-  }
 
 /*     ------- • ❀ • -------     */
 
@@ -584,6 +629,30 @@ Pink Generalist - Deen Rotaru's portfolio
     margin-top: 20px;
   }
 
+  .google-sheets{
+    display: block;
+    height: 400px;
+    width: auto;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .google-sheets button:hover .google-sheets-img{
+    filter: brightness(120%) grayscale(10%);
+    transition: filter 0.5s;
+  }
+
+  .google-sheets .google-sheets-button{
+    display: block;
+    height: 50px;
+    width: auto;
+    z-index: 2;
+    position: absolute;
+    margin: 190px 120px;
+  }
+  .google-sheets button{
+    font-size: 0.7em;
+  }
 /*     ------- • ❀ • -------     */
 
 /*
@@ -612,6 +681,7 @@ Pink Generalist - Deen Rotaru's portfolio
   .contact-info-icon svg{
     height: 50px;
     margin: 0 auto;
+    fill: var(--black);
   }
 
   .contact-info-text{
@@ -626,7 +696,18 @@ Pink Generalist - Deen Rotaru's portfolio
     letter-spacing: 2px;
   }
 
-
+  .contact-cv{
+    font-family: 'Gotham Medium', Roboto, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--pink);
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+  .contact-cv:hover{color: var(--lightpink); text-decoration: underline; transition: color 0.2s, text-decoration 0.2s; transition-timing-function: ease-in-out;}
+  .download-link{fill: var(--pink);}
 /*     ------- • ❀ • -------     */
 
 /*
@@ -772,30 +853,47 @@ Pink Generalist - Deen Rotaru's portfolio
   
 /*     ------- • ❀ • -------     */
 
-/* MonDrink banner */ .sub-mondrink .subpage-project-banner{background: url("Assets/Projects/MonDrink/Project_cover_banner_MonDrink.png") no-repeat top left;}
+/* MonDrink scrollbar */.sub-mondrink::-webkit-scrollbar-thumb {background-color: var(--mondrink-light);}
+/* MonDrink banner */ .sub-mondrink .subpage-project-banner{background-color: var(--mondrink);}
 /* MonDrink link */.sub-mondrink a{color: var(--mondrink); transition: color 0.2s; transition-timing-function: ease-in-out;}
 /* MonDrink link hover */.sub-mondrink a:hover{color: var(--mondrink-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
 /* MonDrink Button */.sub-mondrink button{background-color: var(--mondrink); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
 /* MonDrink Button hover */.mondrink button:hover{background-color: var(--mondrink-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
 /* MonDrink SVG hover */.sub-mondrink svg:hover{fill: var(--mondrink-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
 
-/* AAU banner */ .sub-aau .subpage-project-banner{background: url("Assets/Projects/AarhusArtisticUnderground/Project_cover_banner_AAU.png") no-repeat top left;}
+/* AAU scrollbar */.sub-aau::-webkit-scrollbar-thumb {background-color: var(--aau-light);}
+/* AAU banner */ .sub-aau .subpage-project-banner{background-color: var(--aau);}
 /* AAU link */.sub-aau a{color: var(--aau); transition: color 0.2s; transition-timing-function: ease-in-out;}
 /* AAU link hover */.sub-aau a:hover{color: var(--aau-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
-/* AAU Button */.sub-aau button{background-color: var(--aau); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
-/* AAU Button hover */.aau button:hover{background-color: var(--aau-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* AAU Button */.sub-aau button{background-color: var(--aau); transition: background-color 0.2s, color 0.2s; transition-timing-function: ease-in-out;}
+/* AAU Button main hover */.aau button:hover{color: var(--white); background-color: var(--aau); transition: background-color 0.2s, color 0.2s; transition-timing-function: ease-in-out;}
+/* AAU Button hover */.sub-aau button:hover{color: var(--black); background-color: var(--aau-light); transition: background-color 0.2s, color 0.2s; transition-timing-function: ease-in-out;}
 /* AAU SVG hover */.sub-aau svg:hover{fill: var(--aau-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
 
+/* EcoBites scrollbar */.sub-ecobites::-webkit-scrollbar-thumb {background-color: var(--ecobites);}
+/* EcoBites banner */ .sub-ecobites .subpage-project-banner{background-color: var(--ecobites-banner);}
 /* EcoBites link */.sub-ecobites a{color: var(--ecobites); transition: color 0.2s; transition-timing-function: ease-in-out;}
 /* EcoBites link hover */.sub-ecobites a:hover{color: var(--ecobites-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
 /* EcoBites Button */.sub-ecobites button{background-color: var(--ecobites); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
 /* EcoBites Button hover */.ecobites button:hover{background-color: var(--ecobites-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
 /* EcoBites SVG hover */.sub-ecobites svg:hover{fill: var(--ecobites-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
 
-/* SwapLang hover */.swaplang button:hover{background-color: var(--swaplang); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* SwapLang scrollbar */.sub-swaplang::-webkit-scrollbar-thumb {background-color: var(--swaplang);}
+/* SwapLang banner */ .sub-swaplang .subpage-project-banner{background-color: var(--swaplang-banner);}
+/* SwapLang link */.sub-swaplang a{color: var(--swaplang); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* SwapLang link hover */.sub-swaplang a:hover{color: var(--swaplang-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* SwapLang Button */.sub-swaplang button{background-color: var(--swaplang); transition: background-color 0.2s, color 0.2s; transition-timing-function: ease-in-out;}
+/* SwapLang Button hover */.sub-swaplang button:hover{color: var(--white); background-color: var(--swaplang-light); transition: background-color 0.2s, color 0.2s; transition-timing-function: ease-in-out;}
+/* SwapLang hover */.swaplang button:hover{background-color: var(--swaplang-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* SwapLang SVG  */.sub-swaplang svg{fill: var(--swaplang); transition: fill 0.2s; transition-timing-function: ease-in-out;}
 /* SwapLang SVG hover */.sub-swaplang svg:hover{fill: var(--swaplang-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
 
-/* Bunny Meadow hover */.bunnymeadow button:hover{background-color: var(--bunnymeadow); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* Bunny Meadow scrollbar */.sub-bunnymeadow::-webkit-scrollbar-thumb {background-color: var(--bunnymeadow);}
+/* Bunny Meadow banner */ .sub-bunnymeadow .subpage-project-banner{background-color: var(--bunnymeadow-light);}
+/* Bunny Meadow link */.sub-bunnymeadow a{color: var(--bunnymeadow); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* Bunny Meadow link hover */.sub-bunnymeadow a:hover{color: var(--bunnymeadow-light); transition: color 0.2s; transition-timing-function: ease-in-out;}
+/* Bunny Meadow Button */.sub-bunnymeadow button{background-color: var(--bunnymeadow); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
+/* Bunny Meadow Button hover */.bunnymeadow button:hover{background-color: var(--bunnymeadow-light); transition: background-color 0.2s; transition-timing-function: ease-in-out;}
 /* Bunny Meadow SVG hover */.sub-bunnymeadow svg:hover{fill: var(--bunnymeadow-light); transition: fill 0.2s; transition-timing-function: ease-in-out;}
 
 /*     ------- • ❀ • -------     */
@@ -835,7 +933,7 @@ Pink Generalist - Deen Rotaru's portfolio
 */
     @media screen and (max-width: 1050px) and (min-width: 905px){
       section{display: block; margin: 10px auto;}
-      .section-container{width: 70%; margin: auto;}
+      .section-container{width: 70%; margin: 20px auto;}
 
       .side-image{
         display: block;
@@ -1026,7 +1124,7 @@ Pink Generalist - Deen Rotaru's portfolio
 */
 
     @media screen and (max-width: 904px) and (min-width: 700px){
-      nav{display: block; width: 100%; margin-bottom: 50px;}
+      nav{display: block; width: 100%; margin-bottom: 50px; z-index: 10;}
       section{display: block; margin: 20px auto;}
 
       /* Navigation bar */
@@ -1034,7 +1132,7 @@ Pink Generalist - Deen Rotaru's portfolio
 
       /* Hero section */
       header{display: block; margin: 15px auto;}
-      .hero-image{display: none;}
+      .hero-image-wrap{display: none;}
       .hero-pink{display: block;}
       .hero-changing-text{display: block;}
 
@@ -1058,6 +1156,7 @@ Pink Generalist - Deen Rotaru's portfolio
         align-items:center;
         width: 85%;
         margin: auto;
+        margin-top: 15%;
         gap: 1rem;
       }
 
@@ -1234,14 +1333,15 @@ Pink Generalist - Deen Rotaru's portfolio
   Responsiveness - Mobile & Content modifiers
 */
     @media screen and (max-width: 700px) {
-      nav{display: block; width: 100%; margin-bottom: 50px;}
+      nav{display: block; width: 100%; margin-bottom: 50px; z-index: 10;}
       section{display: block; margin: 5px auto;}
+      #contactPage{display: block; height: 700px;}
 
     /* Divider */ hr{width: 100%; margin: 25px auto;}
 
     /* Hero section */
       header{display: block; margin: 15px auto;}
-      .hero-image{display: none;}
+      .hero-image-wrap{display: none;}
       .hero-pink{display: block;}
       .hero-changing-text{display: block;}
       
@@ -1258,6 +1358,7 @@ Pink Generalist - Deen Rotaru's portfolio
         align-items:center;
         width: 85%;
         margin: auto;
+        margin-top: 15%;
         gap: 1rem;
       }
 
@@ -1467,4 +1568,7 @@ Pink Generalist - Deen Rotaru's portfolio
       .projects-side-text p{width: 85%; text-align: left; margin: auto;}
       .projects-side-text hr{width: 85%; margin: 25px auto;}
       .projects-side-text h2{width: 85%; text-align: center;}
+
+    /*     ------- • ❀ • -------     */
+    
     }
